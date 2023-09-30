@@ -74,10 +74,7 @@ const Greeting = (name) => {
   return '<h1 class="display-4">Hello!</h1>'
 }
 
-/**
- * Pure function to generate Spinner HTML
- * @returns {string} string representing Spinner HTML
- */
+
 const Spinner = () => {
   return `
         <div class="spinner-grow" style="width: 3rem; height: 3rem;" role="status">
@@ -86,10 +83,7 @@ const Spinner = () => {
     `
 }
 
-/**
- * Pure function to generate PhotoModal HTML
- * @returns {string} string representing PhotoModal HTML
- */
+
 const PhotoModal = (photo) => {
   const url = photo.get('img_src')
   const alt = photo.get('camera').get('full_name')
@@ -120,10 +114,7 @@ const PhotoModal = (photo) => {
     `
 }
 
-/**
- * Pure function to generate GenerateCard HTML
- * @returns {string} string representing GenerateCard HTML
- */
+
 const GenerateCard = (store, rover) => {
   return (`
         <div class="col-sm-6 mb-2">
@@ -145,10 +136,6 @@ const GenerateCard = (store, rover) => {
     `)
 }
 
-/**
- * Pure function to stringify an object
- * @returns {string} string representing stringified object
- */
 const toStrArgs = (args) => {
   return JSON.stringify(args).replace(/"/g, '\'')
 }
@@ -178,7 +165,7 @@ const processRover = (state) => {
  * High order function to get list of rovers
  */
 const getListOfRovers = (callback) => {
-  fetch('http://localhost:3007/rovers')
+  fetch('http://localhost:3000/rovers')
     .then(res => res.json())
     .then(json => callback(json))
 }
@@ -187,7 +174,7 @@ const getListOfRovers = (callback) => {
  * High order function to get rover photos
  */
 const getRoverData = (roverName, maxDate, callback) => {
-  fetch(`http://localhost:3007/rovers/${roverName}?max_date=${maxDate}`)
+  fetch(`http://localhost:3000/rovers/${roverName}?max_date=${maxDate}`)
     .then(res => res.json())
     .then(json => callback(json))
 }
