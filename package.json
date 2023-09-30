@@ -1,0 +1,30 @@
+{
+  "name": "marsdashbord",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haneenalnuwaysir/marsDashbord.git"
+  },
+  "author": "Haneen Alnuwaysir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/haneenalnuwaysir/marsDashbord/issues"
+  },
+  "homepage": "https://github.com/haneenalnuwaysir/marsDashbord#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fetch": "^1.1.0",
+    "immutable": "^5.0.0-beta.4",
+    "isomorphic-fetch": "^3.0.0",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^3.0.1"
+  }
+}
